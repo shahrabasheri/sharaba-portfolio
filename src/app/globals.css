@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #0F1316;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: #B8902F;
+  color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F1E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D5C8;
+  border-radius: 6px;
+  border: 2px solid #F4F1E8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B3A1;
+}
+
+/* Reveal-on-scroll utility (CSS only, no JS dependency) */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle inner glow on case-study card hover */
+.card-glow {
+  position: relative;
+}
+.card-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 1px rgba(184, 144, 47, 0);
+  transition: box-shadow 0.3s ease;
+  pointer-events: none;
+}
+.card-glow:hover::after {
+  box-shadow: 0 0 0 1px rgba(184, 144, 47, 0.4);
+}
