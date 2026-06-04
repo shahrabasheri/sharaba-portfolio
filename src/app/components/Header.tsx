@@ -1,10 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const rawPath = usePathname() || "/";
+  const pathname = rawPath.length > 1 ? rawPath.replace(/\/$/, "") : rawPath;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -62,15 +65,24 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-base leading-6 font-medium text-text-primary/90 hover:text-text-primary transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive =
+              link.href === "/" ? pathname === "/" : pathname === link.href;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`text-base leading-6 font-medium transition-colors ${
+                  isActive
+                    ? "text-gold-dark"
+                    : "text-text-primary/90 hover:text-text-primary"
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
           <a
             href="mailto:shahrabasheri153@gmail.com"
             className="inline-flex items-center gap-2 px-4 py-2 bg-text-primary text-white rounded-full hover:bg-text-secondary transition-all duration-300 text-base leading-6 font-medium"
@@ -110,16 +122,27 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-black/5">
           <nav className="flex flex-col px-6 py-4 gap-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="py-3 text-base leading-6 font-medium text-text-primary/90 hover:text-text-primary transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname === link.href;
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`py-3 text-base leading-6 font-medium transition-colors ${
+                    isActive
+                      ? "text-gold-dark"
+                      : "text-text-primary/90 hover:text-text-primary"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
             <a
               href="mailto:shahrabasheri153@gmail.com"
               onClick={() => setMobileOpen(false)}
