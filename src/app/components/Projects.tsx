@@ -25,7 +25,7 @@ export default function Projects() {
 
                 {/* Right — text */}
                 <div className="p-6 md:p-7 flex flex-col order-2">
-                  <h3 className="font-display text-2xl md:text-[28px] leading-tight font-bold text-gold-dark mb-1 tracking-tight">
+                  <h3 className="font-display text-2xl md:text-[28px] leading-tight font-bold text-text-primary mb-1 tracking-tight">
                     {project.title}
                   </h3>
                   {project.subtitle && (
