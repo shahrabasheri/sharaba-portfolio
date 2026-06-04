@@ -69,8 +69,10 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Right — image on plain white */}
-                <div className="relative min-h-[260px] sm:min-h-0 flex items-center justify-center p-6">
+                {/* Right — image on colored panel */}
+                <div
+                  className={`relative ${project.bgColor} min-h-[260px] sm:min-h-0 flex items-center justify-center p-5`}
+                >
                   <Image
                     src={project.image}
                     alt={project.title}
