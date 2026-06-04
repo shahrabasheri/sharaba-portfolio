@@ -79,7 +79,7 @@ export const projects: Project[] = [
     description:
       "PMs were making errors and losing time because the system had no clear flow. I started with a heuristic evaluation to figure out exactly what was broken. Then I replaced the raw list view with offer cards (so a PM can see everything they need at a glance) and built a step-by-step flow for creating new offers.",
     tags: ["Heuristic Evaluation", "IA", "Enterprise SaaS"],
-    image: "/images/project-upc.jpg",
+    image: "/images/project-upc.svg",
     bgColor: "bg-[#0e5a8a]",
     nextProject: "chatbot",
     detail: {
