@@ -8,11 +8,19 @@ export default function Hero() {
         <p className="text-text-secondary text-lg md:text-xl mb-8">
           UI/UX Designer
         </p>
-        <p className="text-text-secondary text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+        <p className="text-text-secondary text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
           I&apos;m a UI/UX designer with 3+ years of experience, driven by how
           people move through spaces, physical and digital. Trained as an
           architect, now based in Dubai designing for product teams.
         </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gold-dark text-white rounded-full font-medium hover:bg-gold transition-all duration-300 text-base"
+          >
+            Get in touch
+          </a>
+        </div>
       </div>
     </section>
   );
