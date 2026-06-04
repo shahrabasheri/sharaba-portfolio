@@ -371,7 +371,7 @@ export const projects: Project[] = [
     description:
       "A full website redesign for a large industrial group. The new site shows the scale of their work across the Gulf, USA, and India, and makes their services easy to navigate.",
     tags: ["Web Redesign", "IA", "Live"],
-    image: "/images/project-nbtc.jpg",
+    image: "/images/project-nbtc.svg",
     bgColor: "bg-[#1a3a6a]",
     nextProject: "gallery",
     detail: {
