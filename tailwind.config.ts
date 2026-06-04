@@ -24,7 +24,7 @@ const config: Config = {
           DEFAULT: "#F4F4F4",
           light: "#EBEBEB",
         },
-        // Accent — Sarah Lauchli portfolio magenta (#B51F64)
+        // Accent: Sarah Lauchli portfolio magenta (#B51F64)
         gold: {
           DEFAULT: "#B51F64",
           light: "#D43077",

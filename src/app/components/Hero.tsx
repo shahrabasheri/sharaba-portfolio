@@ -10,7 +10,7 @@ export default function Hero() {
         </p>
         <p className="text-text-secondary text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
           I&apos;m a UI/UX designer with 3+ years of experience, driven by how
-          people move through spaces — physical and digital. Trained as an
+          people move through spaces, physical and digital. Trained as an
           architect, now based in Dubai designing for product teams.
         </p>
       </div>
