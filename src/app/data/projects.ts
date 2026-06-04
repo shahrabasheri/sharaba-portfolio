@@ -229,7 +229,7 @@ export const projects: Project[] = [
     description:
       "An AI chatbot for customer support, over text and voice. I mapped out 10+ conversation scenarios and made sure each one either resolves the issue or hands off cleanly to a human agent, with the full chat history attached.",
     tags: ["Conversational UI", "Journey Mapping", "Voice + Text"],
-    image: "/images/project-chatbot.jpg",
+    image: "/images/project-chatbot.svg",
     bgColor: "bg-[#1a2a3a]",
     nextProject: "nbtc",
     detail: {
