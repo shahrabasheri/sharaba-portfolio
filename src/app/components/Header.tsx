@@ -68,7 +68,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-base leading-6 text-text-secondary hover:text-text-primary transition-colors"
+              className="text-base leading-6 font-medium text-text-primary/90 hover:text-text-primary transition-colors"
             >
               {link.label}
             </a>
@@ -117,7 +117,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="py-3 text-base leading-6 text-text-secondary hover:text-text-primary transition-colors"
+                className="py-3 text-base leading-6 font-medium text-text-primary/90 hover:text-text-primary transition-colors"
               >
                 {link.label}
               </a>
