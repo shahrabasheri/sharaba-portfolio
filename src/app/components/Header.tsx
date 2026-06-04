@@ -13,7 +13,7 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { label: "Work", href: "/projects" },
+    { label: "Portfolio", href: "/" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
