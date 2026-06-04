@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="relative bg-dark pt-32 pb-16 md:pt-40 md:pb-20">
       <div className="mx-auto px-6 md:px-12 lg:px-[200px] text-center">
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-gold-dark mb-4 tracking-[-0.02em] leading-[1.05]">
+        <h1 className="font-display text-[60px] leading-[68px] font-bold text-gold-dark mb-4 tracking-[-0.02em]">
           Hi, I&apos;m Shahraba KV
         </h1>
         <p className="text-text-secondary text-lg md:text-xl mb-8">
