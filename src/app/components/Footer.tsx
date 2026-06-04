@@ -3,7 +3,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-blue-gray border-t border-black/5 pt-16 pb-10">
-      <div className="mx-auto px-6 md:px-12 lg:px-[200px]">
+      <div className="mx-auto px-6 md:px-12 lg:px-[120px]">
         <div className="grid md:grid-cols-[1fr,auto] gap-10 md:gap-16 items-end pb-12 border-b border-black/5">
           {/* Brand line */}
           <div>

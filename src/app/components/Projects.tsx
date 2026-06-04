@@ -5,7 +5,7 @@ import { projects } from "../data/projects";
 export default function Projects() {
   return (
     <section id="projects" className="bg-dark py-16 md:py-24">
-      <div className="mx-auto px-6 md:px-12 lg:px-[200px]">
+      <div className="mx-auto px-6 md:px-12 lg:px-[120px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project) => {
             const cardBody = (

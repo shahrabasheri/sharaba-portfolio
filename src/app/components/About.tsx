@@ -10,7 +10,7 @@ export default function About() {
 
   return (
     <section id="about" className="bg-blue-gray py-20 md:py-28 relative overflow-hidden">
-      <div className="mx-auto px-6 md:px-12 lg:px-[200px]">
+      <div className="mx-auto px-6 md:px-12 lg:px-[120px]">
         {/* Headline */}
         <h2 className="font-display text-3xl md:text-5xl font-medium text-text-primary mb-12 leading-[1.1] tracking-[-0.02em] max-w-3xl">
           I designed{" "}
