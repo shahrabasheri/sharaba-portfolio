@@ -16,8 +16,8 @@ const config: Config = {
       },
       colors: {
         dark: {
-          DEFAULT: "#FFFFFF",
-          light: "#F4F4F4",
+          DEFAULT: "#F4F4F4",
+          light: "#EBEBEB",
           card: "#FFFFFF",
         },
         "blue-gray": {
