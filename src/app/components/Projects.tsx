@@ -9,7 +9,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project) => {
             const cardBody = (
-              <article className="bg-white rounded-2xl overflow-hidden shadow-sm group-hover:shadow-2xl transition-shadow duration-500 grid grid-cols-1 sm:grid-cols-2 h-full">
+              <article className="bg-white rounded-2xl overflow-hidden shadow-md ring-1 ring-black/5 group-hover:shadow-2xl group-hover:-translate-y-0.5 transition-all duration-500 grid grid-cols-1 sm:grid-cols-2 h-full">
                 {/* Left — text */}
                 <div className="p-6 md:p-7 flex flex-col">
                   <h3 className="font-display text-2xl md:text-[28px] leading-tight font-bold text-gold-dark mb-1 tracking-tight">

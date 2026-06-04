@@ -16,13 +16,13 @@ const config: Config = {
       },
       colors: {
         dark: {
-          DEFAULT: "#F4F4F4",
-          light: "#EBEBEB",
+          DEFAULT: "#ECECEC",
+          light: "#E0E0E0",
           card: "#FFFFFF",
         },
         "blue-gray": {
-          DEFAULT: "#F4F4F4",
-          light: "#EBEBEB",
+          DEFAULT: "#ECECEC",
+          light: "#E0E0E0",
         },
         // Accent: Sarah Lauchli portfolio magenta (#B51F64)
         gold: {
