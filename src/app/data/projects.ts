@@ -440,7 +440,7 @@ export const projects: Project[] = [
     description:
       "Side projects where I get to play with visual identity, typography, colour, and composition outside of client work.",
     tags: ["Visual Design", "Mobile App", "Brand"],
-    image: "/images/project-gallery.jpg",
+    image: "/images/project-gallery.svg",
     bgColor: "bg-[#8B6914]",
     nextProject: "upc",
     detail: {
