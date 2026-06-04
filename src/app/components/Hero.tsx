@@ -18,9 +18,10 @@ export default function Hero() {
           </p>
 
           <p className="text-base md:text-lg text-text-secondary mb-10 max-w-xl leading-relaxed">
-            UI/UX designer based in Dubai. Three years of work across telecom,
-            engineering, and consumer apps. I think about products the way I
-            used to think about buildings.
+            I&apos;m Shahraba, a UI/UX designer with 3+ years of experience,
+            driven by how people move through spaces — physical and digital.
+            Trained as an architect, now based in Dubai designing for
+            product teams.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-6">

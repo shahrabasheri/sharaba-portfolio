@@ -52,6 +52,7 @@ export interface Project {
   role: string;
   title: string;
   subtitle?: string;
+  year?: string;
   problem: string;
   outcome: string;
   description: string;
