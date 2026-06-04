@@ -10,8 +10,21 @@ export default function Projects() {
           {projects.map((project) => {
             const cardBody = (
               <article className="bg-white rounded-2xl overflow-hidden shadow-md ring-1 ring-black/5 group-hover:shadow-2xl group-hover:-translate-y-0.5 transition-all duration-500 grid grid-cols-1 sm:grid-cols-2 h-full">
-                {/* Left — text */}
-                <div className="p-6 md:p-7 flex flex-col">
+                {/* Left — image on colored panel */}
+                <div
+                  className={`relative ${project.bgColor} min-h-[260px] sm:min-h-0 flex items-center justify-center p-5 order-1`}
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-contain p-4 transition-transform duration-700 group-hover:scale-[1.04]"
+                    sizes="(max-width: 768px) 100vw, 30vw"
+                  />
+                </div>
+
+                {/* Right — text */}
+                <div className="p-6 md:p-7 flex flex-col order-2">
                   <h3 className="font-display text-2xl md:text-[28px] leading-tight font-bold text-gold-dark mb-1 tracking-tight">
                     {project.title}
                   </h3>
@@ -67,19 +80,6 @@ export default function Projects() {
                       </span>
                     )}
                   </div>
-                </div>
-
-                {/* Right — image on colored panel */}
-                <div
-                  className={`relative ${project.bgColor} min-h-[260px] sm:min-h-0 flex items-center justify-center p-5`}
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-contain p-4 transition-transform duration-700 group-hover:scale-[1.04]"
-                    sizes="(max-width: 768px) 100vw, 30vw"
-                  />
                 </div>
               </article>
             );
