@@ -12,13 +12,13 @@ export default function Projects() {
               <article className="bg-white rounded-2xl overflow-hidden shadow-md ring-1 ring-black/5 group-hover:shadow-2xl group-hover:-translate-y-0.5 transition-all duration-500 grid grid-cols-1 sm:grid-cols-2 h-full">
                 {/* Left — image on colored panel */}
                 <div
-                  className={`relative ${project.bgColor} min-h-[260px] sm:min-h-0 order-1 overflow-hidden`}
+                  className={`relative ${project.bgColor} min-h-[260px] sm:min-h-0 flex items-center justify-center p-5 order-1`}
                 >
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                    className="object-contain p-4 transition-transform duration-700 group-hover:scale-[1.04]"
                     sizes="(max-width: 768px) 100vw, 30vw"
                   />
                 </div>
