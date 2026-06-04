@@ -5,7 +5,7 @@ export default function Contact() {
       className="bg-blue-gray py-20 md:py-28 relative overflow-hidden"
     >
 
-      <div className="max-w-[900px] mx-auto px-6 md:px-16 text-center relative">
+      <div className="mx-auto px-6 md:px-12 lg:px-[200px] text-center relative">
         <h2 className="font-display text-4xl md:text-6xl font-medium text-text-primary leading-[1.1] mb-5 tracking-[-0.02em]">
           Want to{" "}
           <span className="font-serif italic font-normal text-gold-dark">
