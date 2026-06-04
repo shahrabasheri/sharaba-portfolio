@@ -9,25 +9,37 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project) => {
             const cardBody = (
-              <div
-                className={`relative ${project.bgColor} rounded-2xl p-6 md:p-8 h-full flex flex-col gap-6 transition-transform duration-500 group-hover:-translate-y-1 group-hover:shadow-2xl`}
-              >
-                {/* Text top */}
-                <div className="text-white">
-                  <h3 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-1">
+              <article className="bg-white rounded-2xl overflow-hidden shadow-sm group-hover:shadow-2xl transition-shadow duration-500 grid grid-cols-1 sm:grid-cols-2 h-full">
+                {/* Left — text */}
+                <div className="p-6 md:p-7 flex flex-col">
+                  <h3 className="font-display text-2xl md:text-[28px] leading-tight font-bold text-gold-dark mb-1 tracking-tight">
                     {project.title}
                   </h3>
                   {project.subtitle && (
-                    <p className="text-white/70 text-sm mb-3">
+                    <p className="text-text-secondary text-sm mb-3">
                       {project.subtitle}
                     </p>
                   )}
-                  <p className="text-white/80 text-sm md:text-base leading-relaxed mb-4">
+                  <p className="text-text-secondary text-sm leading-relaxed mb-5 flex-1">
                     {project.problem}
                   </p>
-                  <div className="flex flex-wrap items-center gap-2 text-xs">
+
+                  {project.tags && project.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {project.tags.slice(0, 3).map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2.5 py-1 text-[11px] border border-tag-border text-text-secondary rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="flex items-center gap-2 text-xs mt-auto pt-2 border-t border-tag-border/60">
                     {(project.year || project.comingSoon) && (
-                      <span className="text-white/60">
+                      <span className="text-text-secondary/70">
                         {project.comingSoon
                           ? project.conceptProject
                             ? "Concept"
@@ -36,7 +48,7 @@ export default function Projects() {
                       </span>
                     )}
                     {!project.comingSoon && (
-                      <span className="text-white/90 font-medium inline-flex items-center gap-1">
+                      <span className="ml-auto text-gold-dark font-medium inline-flex items-center gap-1">
                         Learn more
                         <svg
                           width="12"
@@ -57,23 +69,25 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Image bottom */}
-                <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-white/5 mt-auto">
+                {/* Right — image on colored panel */}
+                <div
+                  className={`relative ${project.bgColor} min-h-[260px] sm:min-h-0 flex items-center justify-center p-5`}
+                >
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-contain transition-transform duration-700 group-hover:scale-[1.03]"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-contain p-4 transition-transform duration-700 group-hover:scale-[1.04]"
+                    sizes="(max-width: 768px) 100vw, 30vw"
                   />
                 </div>
-              </div>
+              </article>
             );
 
             return project.comingSoon ? (
-              <article key={project.slug} className="group block">
+              <div key={project.slug} className="group block">
                 {cardBody}
-              </article>
+              </div>
             ) : (
               <Link
                 key={project.slug}
