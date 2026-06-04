@@ -68,14 +68,14 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+              className="text-base leading-6 text-text-secondary hover:text-text-primary transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
             href="mailto:shahrabasheri153@gmail.com"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-text-primary text-white rounded-full hover:bg-text-secondary transition-all duration-300 text-sm font-medium"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-text-primary text-white rounded-full hover:bg-text-secondary transition-all duration-300 text-base leading-6 font-medium"
           >
             Get in touch
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -117,7 +117,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="py-3 text-base text-text-secondary hover:text-text-primary transition-colors"
+                className="py-3 text-base leading-6 text-text-secondary hover:text-text-primary transition-colors"
               >
                 {link.label}
               </a>
@@ -125,7 +125,7 @@ export default function Header() {
             <a
               href="mailto:shahrabasheri153@gmail.com"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 bg-text-primary text-white rounded-full transition-colors text-sm font-medium"
+              className="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 bg-text-primary text-white rounded-full transition-colors text-base leading-6 font-medium"
             >
               Get in touch
             </a>
