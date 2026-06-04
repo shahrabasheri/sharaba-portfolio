@@ -11,7 +11,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
         display: [
-          "var(--font-geist-sans)",
+          "var(--font-outfit)",
           "var(--font-inter)",
           "sans-serif",
         ],
@@ -28,26 +28,25 @@ const config: Config = {
           "monospace",
         ],
       },
-      // Tokens kept for backwards-compat naming, values inverted for the
-      // light/white theme. "dark" now means the page background (white).
       colors: {
         dark: {
-          DEFAULT: "#FFFFFF", // page background
-          light: "#F8F6F0", // softly tinted band
-          card: "#FFFFFF", // surface card
+          DEFAULT: "#FFFFFF",
+          light: "#F4F4F4",
+          card: "#FFFFFF",
         },
         "blue-gray": {
-          DEFAULT: "#F4F1E8", // warm cream, alt-section background
-          light: "#E9E4D2",
+          DEFAULT: "#F4F4F4",
+          light: "#EBEBEB",
         },
+        // Accent — Sarah Lauchli portfolio magenta (#B51F64)
         gold: {
-          DEFAULT: "#B8902F", // contrast-safe gold for body/text use
-          light: "#D4A843", // original lighter gold for accents/CTAs
-          dark: "#8C6E1F",
+          DEFAULT: "#B51F64",
+          light: "#D43077",
+          dark: "#8E1B50",
         },
-        "text-primary": "#0F1316",
-        "text-secondary": "#5A5A5F",
-        "tag-border": "#D9D5C8",
+        "text-primary": "#000000",
+        "text-secondary": "#4F4F4F",
+        "tag-border": "#D9D9D9",
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease-out forwards",
