@@ -1,26 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Outfit, Instrument_Serif } from "next/font/google";
-import { GeistMono } from "geist/font/mono";
+import { Outfit } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
   display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  variable: "--font-instrument-serif",
-  display: "swap",
-  weight: "400",
-  style: ["normal", "italic"],
 });
 
 const siteUrl = "https://shahraba-kv.vercel.app";
@@ -68,9 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${outfit.variable} ${GeistMono.variable} ${instrumentSerif.variable} font-sans antialiased`}
-      >
+      <body className={`${outfit.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

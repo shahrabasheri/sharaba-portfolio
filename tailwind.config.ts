@@ -9,24 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: [
-          "var(--font-outfit)",
-          "var(--font-inter)",
-          "sans-serif",
-        ],
-        serif: [
-          "var(--font-instrument-serif)",
-          "ui-serif",
-          "Georgia",
-          "serif",
-        ],
-        mono: [
-          "var(--font-geist-mono)",
-          "ui-monospace",
-          "SFMono-Regular",
-          "monospace",
-        ],
+        sans: ["var(--font-outfit)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-outfit)", "sans-serif"],
+        serif: ["var(--font-outfit)", "sans-serif"],
+        mono: ["var(--font-outfit)", "ui-monospace", "monospace"],
       },
       colors: {
         dark: {
