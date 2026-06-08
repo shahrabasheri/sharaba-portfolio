@@ -246,11 +246,7 @@ export const projects: Project[] = [
         "Redesign the catalogue with offer cards, a step-by-step creation flow, and clear status tracking, so PMs can spend their time on the offers themselves and not on figuring out the tool.",
       comparison: {
         before: "/images/upc-screens/old-view.png",
-        after: "/images/upc-screens/card-view.png",
         beforeLabel: "Before",
-        afterLabel: "After",
-        caption:
-          "From a dense list view with scattered filters and inconsistent tabs to a scannable card grid grouped by Active, Inactive, and Drafts.",
       },
       designSections: [
         {

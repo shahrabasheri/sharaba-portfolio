@@ -205,7 +205,7 @@ export default async function ProjectPage({
             )}
             {detail.challengeQuote && (
               <figure className="mt-8 pl-6 border-l border-gold-dark/40 max-w-3xl">
-                <blockquote className="font-serif text-2xl md:text-4xl italic text-text-primary leading-snug">
+                <blockquote className="font-serif text-xl md:text-2xl italic text-text-primary leading-snug">
                   &ldquo;{detail.challengeQuote}&rdquo;
                 </blockquote>
               </figure>
