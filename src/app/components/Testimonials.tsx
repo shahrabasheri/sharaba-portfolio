@@ -6,11 +6,11 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="bg-dark py-16 md:py-24">
       <div className="mx-auto px-6 md:px-12 lg:px-[120px]">
-        <h2 className="font-display text-3xl md:text-5xl font-medium text-text-primary leading-[1.1] tracking-[-0.02em] mb-12 max-w-3xl">
+        <h2 className="font-display text-2xl md:text-3xl font-normal text-text-primary leading-[1.2] tracking-[-0.01em] mb-12 text-center">
           What people I&apos;ve worked with say.
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {testimonials.map((t, i) => (
             <figure
               key={i}

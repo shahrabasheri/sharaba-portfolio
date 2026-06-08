@@ -23,11 +23,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
-        scrolled ? "shadow-sm border-b border-black/5" : ""
+      className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-black/5 transition-shadow duration-300 ${
+        scrolled ? "shadow-md" : "shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
       }`}
     >
-      <div className="mx-auto px-6 md:px-12 lg:px-[120px] flex items-center justify-between h-16 md:h-20">
+      <div className="relative mx-auto px-6 md:px-12 lg:px-[120px] flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <a
           href="/"
@@ -63,8 +63,8 @@ export default function Header() {
           </svg>
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop nav (centered) */}
+        <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/" ? pathname === "/" : pathname === link.href;
@@ -73,27 +73,32 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`text-base leading-6 font-medium transition-colors ${
+                className={`text-base leading-6 transition-colors ${
                   isActive
-                    ? "text-gold-dark"
-                    : "text-text-primary/90 hover:text-text-primary"
+                    ? "text-gold-dark font-semibold"
+                    : "text-text-primary/90 hover:text-text-primary font-medium"
                 }`}
               >
                 {link.label}
               </a>
             );
           })}
-          <a
-            href="mailto:shahrabasheri153@gmail.com"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-text-primary text-white rounded-full hover:bg-text-secondary transition-all duration-300 text-base leading-6 font-medium"
-          >
-            Get in touch
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14" />
-              <path d="M12 5l7 7-7 7" />
-            </svg>
-          </a>
         </nav>
+
+        {/* Desktop Resume CTA (right) */}
+        <a
+          href="/Shahraba_UI-UX_Designer.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex items-center gap-2 px-3.5 py-1.5 bg-white text-gold rounded-lg text-sm leading-5 font-medium ring-1 ring-gold shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:bg-gold/10 transition-colors"
+        >
+          Resume
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
 
         {/* Mobile toggle */}
         <button
@@ -133,10 +138,10 @@ export default function Header() {
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   aria-current={isActive ? "page" : undefined}
-                  className={`py-3 text-base leading-6 font-medium transition-colors ${
+                  className={`py-3 text-base leading-6 transition-colors ${
                     isActive
-                      ? "text-gold-dark"
-                      : "text-text-primary/90 hover:text-text-primary"
+                      ? "text-gold-dark font-semibold"
+                      : "text-text-primary/90 hover:text-text-primary font-medium"
                   }`}
                 >
                   {link.label}
@@ -144,11 +149,18 @@ export default function Header() {
               );
             })}
             <a
-              href="mailto:shahrabasheri153@gmail.com"
+              href="/Shahraba_UI-UX_Designer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 bg-text-primary text-white rounded-full transition-colors text-base leading-6 font-medium"
+              className="mt-2 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-gold rounded-lg text-sm leading-5 font-medium ring-1 ring-gold shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:bg-gold/10 transition-colors"
             >
-              Get in touch
+              Resume
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
             </a>
           </nav>
         </div>

@@ -10,7 +10,7 @@ export default function Projects() {
           {projects.map((project) => {
             const cardBody = (
               <article className="bg-white rounded-2xl overflow-hidden shadow-md ring-1 ring-black/5 group-hover:shadow-2xl group-hover:-translate-y-0.5 transition-all duration-500 grid grid-cols-1 sm:grid-cols-2 h-full">
-                {/* Left — image on colored panel */}
+                {/* Left: image on colored panel */}
                 <div
                   className={`relative ${project.bgColor} min-h-[280px] sm:min-h-0 flex items-center justify-center p-2 order-1`}
                 >
@@ -23,7 +23,7 @@ export default function Projects() {
                   />
                 </div>
 
-                {/* Right — text */}
+                {/* Right: text */}
                 <div className="p-6 md:p-7 flex flex-col order-2">
                   <h3 className="font-display text-2xl md:text-[28px] leading-tight font-bold text-text-primary mb-1 tracking-tight">
                     {project.title}

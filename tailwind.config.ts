@@ -9,20 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-outfit)", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["var(--font-outfit)", "sans-serif"],
-        serif: ["var(--font-outfit)", "sans-serif"],
-        mono: ["var(--font-outfit)", "ui-monospace", "monospace"],
+        sans: ["var(--font-lato)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-lato)", "sans-serif"],
+        serif: ["var(--font-lato)", "sans-serif"],
+        mono: ["var(--font-lato)", "ui-monospace", "monospace"],
       },
       colors: {
         dark: {
-          DEFAULT: "#ECECEC",
-          light: "#E0E0E0",
+          DEFAULT: "#F5F5F5",
+          light: "#EAEAEA",
           card: "#FFFFFF",
         },
         "blue-gray": {
-          DEFAULT: "#ECECEC",
-          light: "#E0E0E0",
+          DEFAULT: "#F5F5F5",
+          light: "#EAEAEA",
         },
         // Accent: Sarah Lauchli portfolio magenta (#B51F64)
         gold: {

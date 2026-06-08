@@ -15,7 +15,7 @@ export default function AboutPage() {
       <main>
         <section className="bg-dark pt-32 pb-10 md:pt-40 md:pb-12">
           <div className="mx-auto px-6 md:px-12 lg:px-[120px] text-center">
-            <h1 className="font-display text-[60px] leading-[68px] font-bold text-gold-dark tracking-[-0.02em]">
+            <h1 className="font-display text-[60px] leading-[68px] font-bold text-text-primary tracking-[-0.02em]">
               About
             </h1>
           </div>
