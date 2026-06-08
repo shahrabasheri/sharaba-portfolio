@@ -51,7 +51,7 @@ export interface ProjectDetail {
   journeyMap?: JourneyStage[];
   comparison?: {
     before: string;
-    after: string;
+    after?: string;
     beforeLabel?: string;
     afterLabel?: string;
     caption?: string;

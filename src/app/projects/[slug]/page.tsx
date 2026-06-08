@@ -337,7 +337,9 @@ export default async function ProjectPage({
       )}
 
       {/* User Journey Mapping */}
-      {detail.journeyMap && (
+      {detail.journeyMap && (() => {
+        const journeyMap = detail.journeyMap;
+        return (
         <Section
           eyebrow="Journey"
           title="User journey"
@@ -349,7 +351,7 @@ export default async function ProjectPage({
           <div
             className="grid gap-px bg-black/5 rounded-xl overflow-hidden border border-black/5"
             style={{
-              gridTemplateColumns: `140px repeat(${detail.journeyMap.length}, minmax(0, 1fr))`,
+              gridTemplateColumns: `140px repeat(${journeyMap.length}, minmax(0, 1fr))`,
             }}
           >
                 {/* User Persona row */}
@@ -360,7 +362,7 @@ export default async function ProjectPage({
                     </div>
                     <div
                       className="bg-white px-5 py-5 text-sm text-text-secondary leading-relaxed"
-                      style={{ gridColumn: `span ${detail.journeyMap.length}` }}
+                      style={{ gridColumn: `span ${journeyMap.length}` }}
                     >
                       <div>
                         Name:{" "}
@@ -386,7 +388,7 @@ export default async function ProjectPage({
                     </div>
                     <div
                       className="bg-white px-5 py-5 text-sm text-text-secondary leading-relaxed"
-                      style={{ gridColumn: `span ${detail.journeyMap.length}` }}
+                      style={{ gridColumn: `span ${journeyMap.length}` }}
                     >
                       <ul className="space-y-1.5">
                         {detail.userGoals.map((g, i) => (
@@ -404,13 +406,13 @@ export default async function ProjectPage({
                 <div className="bg-blue-gray/60 px-5 py-5 text-sm font-semibold text-text-primary flex items-center">
                   User Journey
                 </div>
-                {detail.journeyMap.map((row, i) => (
+                {journeyMap.map((row, i) => (
                   <div
                     key={`stage-${i}`}
                     className="bg-blue-gray px-5 py-5 text-sm font-semibold text-gold leading-snug flex items-center relative"
                   >
                     <span>{row.stage}</span>
-                    {i < detail.journeyMap.length - 1 && (
+                    {i < journeyMap.length - 1 && (
                       <span
                         aria-hidden="true"
                         className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-5 h-5 rounded-full bg-[#EBD5DF] ring-1 ring-gold/30 flex items-center justify-center text-gold shadow-sm"
@@ -434,12 +436,12 @@ export default async function ProjectPage({
                 ))}
 
                 {/* User Interactions row */}
-                {detail.journeyMap.some((r) => r.interactions) && (
+                {journeyMap.some((r) => r.interactions) && (
                   <>
                     <div className="bg-blue-gray/60 px-5 py-5 text-sm font-semibold text-text-primary flex items-center">
                       User Interactions
                     </div>
-                    {detail.journeyMap.map((row, i) => (
+                    {journeyMap.map((row, i) => (
                       <div
                         key={`interactions-${i}`}
                         className="bg-white px-5 py-5 text-sm text-text-secondary leading-relaxed"
@@ -451,12 +453,12 @@ export default async function ProjectPage({
                 )}
 
                 {/* User Actions row */}
-                {detail.journeyMap.some((r) => r.actions) && (
+                {journeyMap.some((r) => r.actions) && (
                   <>
                     <div className="bg-blue-gray/60 px-5 py-5 text-sm font-semibold text-text-primary flex items-center">
                       User Actions
                     </div>
-                    {detail.journeyMap.map((row, i) => (
+                    {journeyMap.map((row, i) => (
                       <div
                         key={`actions-${i}`}
                         className="bg-white px-5 py-5 text-sm text-text-secondary leading-relaxed"
@@ -468,12 +470,12 @@ export default async function ProjectPage({
                 )}
 
                 {/* Goals & Experiences row */}
-                {detail.journeyMap.some((r) => r.goals) && (
+                {journeyMap.some((r) => r.goals) && (
                   <>
                     <div className="bg-blue-gray/60 px-5 py-5 text-sm font-semibold text-text-primary flex items-center">
                       Goals &amp; Experiences
                     </div>
-                    {detail.journeyMap.map((row, i) => (
+                    {journeyMap.map((row, i) => (
                       <div
                         key={`goals-${i}`}
                         className="bg-white px-5 py-5 text-sm text-text-secondary leading-relaxed"
@@ -485,12 +487,12 @@ export default async function ProjectPage({
                 )}
 
                 {/* Feelings and Thoughts row */}
-                {detail.journeyMap.some((r) => r.feelings) && (
+                {journeyMap.some((r) => r.feelings) && (
                   <>
                     <div className="bg-blue-gray/60 px-5 py-5 text-sm font-semibold text-text-primary flex items-center">
                       Feelings &amp; Thoughts
                     </div>
-                    {detail.journeyMap.map((row, i) => (
+                    {journeyMap.map((row, i) => (
                       <div
                         key={`feelings-${i}`}
                         className="bg-white px-5 py-5 text-sm text-text-secondary leading-relaxed"
@@ -502,12 +504,12 @@ export default async function ProjectPage({
                 )}
 
                 {/* Pain Points row */}
-                {detail.journeyMap.some((r) => r.painPoints) && (
+                {journeyMap.some((r) => r.painPoints) && (
                   <>
                     <div className="bg-blue-gray/60 px-5 py-5 text-sm font-semibold text-text-primary flex items-center">
                       Pain Points
                     </div>
-                    {detail.journeyMap.map((row, i) => (
+                    {journeyMap.map((row, i) => (
                       <div
                         key={`pain-${i}`}
                         className="bg-white px-5 py-5 text-sm text-text-secondary leading-relaxed"
@@ -519,12 +521,12 @@ export default async function ProjectPage({
                 )}
 
                 {/* Opportunities row */}
-                {detail.journeyMap.some((r) => r.opportunities) && (
+                {journeyMap.some((r) => r.opportunities) && (
                   <>
                     <div className="bg-blue-gray/60 px-5 py-5 text-sm font-semibold text-text-primary flex items-center">
                       Opportunities
                     </div>
-                    {detail.journeyMap.map((row, i) => (
+                    {journeyMap.map((row, i) => (
                       <div
                         key={`opp-${i}`}
                         className="bg-white px-5 py-5 text-sm text-text-secondary leading-relaxed"
@@ -536,7 +538,8 @@ export default async function ProjectPage({
                 )}
           </div>
         </Section>
-      )}
+        );
+      })()}
 
       {/* Conversation flow (chatbot only) */}
       {detail.flowImage && (
